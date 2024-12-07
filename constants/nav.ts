@@ -19,4 +19,7 @@ export const MENU_ITEMS = [
 
 export const URLS = {
   HOME: "/",
+  CONTACT: "/contact",
+  WORK: "/work",
+  ABOUT: "/about",
 };
