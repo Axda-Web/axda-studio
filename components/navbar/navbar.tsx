@@ -1,8 +1,8 @@
 import { cn } from "@/lib/utils";
 
-import { NavItems } from "@/components/nav-items";
-import { AxdaStudioLogo } from "./axda-studio-logo";
-import { MobileNav } from "./mobile-nav";
+import { NavItems } from "@/components/nav-items/nav-items";
+import { AxdaStudioLogo } from "../axda-studio-logo";
+import { MobileNav } from "../mobile-nav";
 
 export function Navbar() {
   return (
