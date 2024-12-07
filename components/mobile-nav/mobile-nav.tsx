@@ -9,9 +9,9 @@ import {
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 
-import { NavItems } from "@/components/nav-items";
-import { AxdaStudioLogo } from "./axda-studio-logo";
-import { ModeToggle } from "./mode-toggle";
+import { NavItems } from "@/components/nav-items/nav-items";
+import { AxdaStudioLogo } from "../axda-studio-logo";
+import { ModeToggle } from "../mode-toggle";
 
 export function MobileNav() {
   return (
@@ -38,3 +38,5 @@ export function MobileNav() {
     </Sheet>
   );
 }
+
+// TODO: Fix bug widen the screen when mobile nav is open
