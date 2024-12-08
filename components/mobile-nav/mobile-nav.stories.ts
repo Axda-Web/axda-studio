@@ -4,7 +4,7 @@ import { fn } from "@storybook/test";
 import { MobileNav } from "./mobile-nav";
 
 const meta = {
-  title: "",
+  title: "SIMPLE COMPONENTS/MobileNav",
   component: MobileNav,
   parameters: {
     layout: "centered",
