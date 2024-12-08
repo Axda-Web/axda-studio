@@ -24,7 +24,7 @@ export function NavItems({ inSheet }: NavItemsProps) {
   return (
     <ul
       className={cn(
-        "flex flex-col gap-y-6 text-xl items-start",
+        "flex flex-col gap-y-6 text-xl items-start text-red-500",
         "md:flex-row md:gap-x-12 md:items-center"
       )}
     >
