@@ -4,7 +4,7 @@ import { fn } from "@storybook/test";
 import { NavItems } from "./nav-items";
 
 const meta = {
-  title: "",
+  title: "SIMPLE COMPONENTS/NavItems",
   component: NavItems,
   parameters: {
     layout: "centered",

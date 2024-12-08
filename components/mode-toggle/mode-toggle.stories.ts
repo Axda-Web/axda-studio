@@ -4,7 +4,7 @@ import { fn } from "@storybook/test";
 import { ModeToggle } from "./mode-toggle";
 
 const meta = {
-  title: "",
+  title: "SIMPLE COMPONENTS/ModeToggle",
   component: ModeToggle,
   parameters: {
     layout: "centered",
