@@ -5,6 +5,7 @@ import { URLS } from "@/constants/nav";
 export function AxdaStudioLogo() {
   return (
     <Link href={URLS.HOME}>
+      <span className="sr-only">Axda Studio Logo</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="48"
