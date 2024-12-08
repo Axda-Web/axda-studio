@@ -4,7 +4,7 @@ import { fn } from "@storybook/test";
 import { AxdaStudioLogo } from "./axda-studio-logo";
 
 const meta = {
-  title: "",
+  title: "SIMPLE COMPONENTS/AxdaStudioLogo",
   component: AxdaStudioLogo,
   parameters: {
     layout: "centered",
