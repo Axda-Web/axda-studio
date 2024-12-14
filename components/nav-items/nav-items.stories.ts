@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
 
 import { NavItems } from "./nav-items";
 
@@ -11,7 +10,7 @@ const meta = {
   },
   tags: ["autodocs"],
   argTypes: {},
-  args: { onClick: fn() },
+  args: { inSheet: false },
 } satisfies Meta<typeof NavItems>;
 
 export default meta;
@@ -19,5 +18,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {},
+  args: { inSheet: false },
+};
+
+export const InSheet: Story = {
+  args: { inSheet: true },
 };
