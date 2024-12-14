@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
 
 import { ModeToggle } from "./mode-toggle";
 
@@ -11,7 +10,7 @@ const meta = {
   },
   tags: ["autodocs"],
   argTypes: {},
-  args: { onClick: fn() },
+  args: { positionAbsolute: false },
 } satisfies Meta<typeof ModeToggle>;
 
 export default meta;
@@ -19,5 +18,11 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {},
+  args: {
+    positionAbsolute: false,
+  },
+};
+
+export const PositionAbsolute: Story = {
+  args: { positionAbsolute: true },
 };
