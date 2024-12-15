@@ -1,5 +1,5 @@
 import * as Stories from "./mobile-nav.stories";
-import { test, expect, describe, vi } from "vitest";
+import { test, expect, describe } from "vitest";
 import { screen, fireEvent } from "@testing-library/react";
 import { composeStories } from "@storybook/nextjs";
 
