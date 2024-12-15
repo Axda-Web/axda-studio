@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { withSheetDecorator } from "../../.storybook/decorators";
 
 import { NavItems } from "./nav-items";
 
@@ -23,4 +24,5 @@ export const Default: Story = {
 
 export const InSheet: Story = {
   args: { inSheet: true },
+  decorators: [withSheetDecorator],
 };

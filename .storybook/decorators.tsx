@@ -3,6 +3,7 @@ import type { Decorator } from "@storybook/react";
 import HomeLayout from "../app/(root)/layout";
 import localFont from "next/font/local";
 import { ThemeProvider } from "@/app/providers/theme-provider";
+import { Sheet } from "@/components/ui/sheet";
 
 const interSans = localFont({
   src: "../app/fonts/Inter.ttf",
@@ -33,4 +34,10 @@ export const withHomeLayoutDecorator: Decorator = (Story) => (
   <HomeLayout>
     <Story />
   </HomeLayout>
+);
+
+export const withSheetDecorator: Decorator = (Story) => (
+  <Sheet>
+    <Story />
+  </Sheet>
 );
