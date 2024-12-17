@@ -31,7 +31,11 @@ export function NavItems({ inSheet }: NavItemsProps) {
       {MENU_ITEMS.map(({ label, href }) => (
         <li key={label}>
           <LinkWrapper>
-            <Link href={href} className="group relative">
+            <Link
+              href={href}
+              className="group relative"
+              data-testid="nav-item-link"
+            >
               {label}{" "}
               <span
                 className={`h-px inline-block bg-foreground absolute left-0 -bottom-0.5 group-hover:w-full transition-width ease duration-300 ${
