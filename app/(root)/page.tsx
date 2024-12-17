@@ -59,7 +59,12 @@ export default function HomePage() {
           delay: 0.4,
         }}
       >
-        <Button asChild className="rounded-none text-base" size="lg">
+        <Button
+          data-testid="contact-cta"
+          asChild
+          className="rounded-none text-base"
+          size="lg"
+        >
           <Link href={URLS.CONTACT}>Contact</Link>
         </Button>
         <Button
