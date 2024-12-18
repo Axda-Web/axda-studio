@@ -33,7 +33,7 @@ export default function HomePage() {
       <AnimatedElement
         as="p"
         className={cn(
-          "text-center text-xl leading-6 mx-auto italic",
+          "text-center text-xl leading-6 mx-auto font-medium",
           "md:text-2xl md:max-w-xl",
           "lg:max-w-2xl"
         )}
