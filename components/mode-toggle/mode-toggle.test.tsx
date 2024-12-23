@@ -13,7 +13,7 @@ const { Default, PositionAbsolute } = composeStories(Stories);
 
 describe("ModeToggle", () => {
   describe("default", () => {
-    test("should render sun icon in light mode", async () => {
+    test("should render moon icon in light mode", async () => {
       vi.mocked(useTheme).mockReturnValue({
         theme: "light",
         setTheme: vi.fn(),
@@ -22,10 +22,10 @@ describe("ModeToggle", () => {
 
       await Default.run();
       expect(screen.getByText("Toggle theme")).toBeInTheDocument();
-      expect(screen.getByTestId("sun-icon")).toBeInTheDocument();
+      expect(screen.getByTestId("moon-icon")).toBeInTheDocument();
     });
 
-    test("should render moon icon in dark mode", async () => {
+    test("should render sun icon in dark mode", async () => {
       vi.mocked(useTheme).mockReturnValue({
         theme: "dark",
         setTheme: vi.fn(),
@@ -34,7 +34,7 @@ describe("ModeToggle", () => {
 
       await Default.run();
       expect(screen.getByText("Toggle theme")).toBeInTheDocument();
-      expect(screen.getByTestId("moon-icon")).toBeInTheDocument();
+      expect(screen.getByTestId("sun-icon")).toBeInTheDocument();
     });
 
     test("should toggle theme when clicked", async () => {

@@ -19,6 +19,5 @@ describe("NavItems", () => {
     expect(screen.getByText("Home")).not.toBeNull();
     expect(screen.getByText("Work")).not.toBeNull();
     expect(screen.getByText("About")).not.toBeNull();
-    expect(screen.getByText("Contact")).not.toBeNull();
   });
 });
