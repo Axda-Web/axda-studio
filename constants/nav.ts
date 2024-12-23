@@ -11,10 +11,6 @@ export const MENU_ITEMS = [
     label: "About",
     href: "/about",
   },
-  {
-    label: "Contact",
-    href: "/contact",
-  },
 ];
 
 export const URLS = {

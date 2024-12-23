@@ -28,14 +28,10 @@ test.describe("Home page", () => {
       const homeNavItem = page.getByRole("link", { name: "Home" });
       const workNavItem = page.getByRole("link", { name: /^Work$/ });
       const aboutNavItem = page.getByRole("link", { name: "About" });
-      const contactNavItem = page.getByTestId("nav-item-link").filter({
-        hasText: "Contact",
-      });
 
       await expect(homeNavItem).toBeVisible();
       await expect(workNavItem).toBeVisible();
       await expect(aboutNavItem).toBeVisible();
-      await expect(contactNavItem).toBeVisible();
 
       await homeNavItem.click();
       await expect(page).toHaveURL("http://localhost:3000/");
@@ -45,10 +41,17 @@ test.describe("Home page", () => {
 
       await aboutNavItem.click();
       await expect(page).toHaveURL("http://localhost:3000/about");
-
-      await contactNavItem.click();
-      await expect(page).toHaveURL("http://localhost:3000/contact");
     });
+  });
+
+  test("should have contact cta", async ({ page }) => {
+    const contactCTA = page.getByTestId("contact-cta").filter({
+      hasText: "CONTACT",
+    });
+    await expect(contactCTA).toBeVisible();
+
+    await contactCTA.click();
+    await expect(page).toHaveURL("http://localhost:3000/contact");
   });
 
   test.describe("Hero section", () => {
@@ -66,16 +69,8 @@ test.describe("Home page", () => {
       await expect(heroDescription).toBeVisible();
     });
 
-    test("should have a Contact CTA", async ({ page }) => {
-      const heroContactCTA = page.getByTestId("contact-cta");
-      await expect(heroContactCTA).toBeVisible();
-
-      await heroContactCTA.click();
-      await expect(page).toHaveURL("http://localhost:3000/contact");
-    });
-
     test("should have a Work CTA", async ({ page }) => {
-      const heroMyWorkCTA = page.getByRole("link", { name: "My Work" });
+      const heroMyWorkCTA = page.getByRole("link", { name: "SEE ALL WORK" });
       await expect(heroMyWorkCTA).toBeVisible();
 
       await heroMyWorkCTA.click();
