@@ -7,10 +7,18 @@ export default defineConfig({
   plugins: [tsconfigPaths(), react()],
   test: {
     environment: "jsdom",
+    exclude: ["**/e2e/**", "**/node_modules/**"],
     coverage: {
       provider: "v8",
       reporter: ["text", "json", "html"],
       include: ["components/**/*.test.{ts,tsx}", "lib/**/*.test.ts"],
+      exclude: [
+        "**/node_modules/**",
+        "**/dist/**",
+        "**/e2e/**", // Excludes all e2e test files
+        "**/cypress/**",
+        "**/coverage/**",
+      ],
       thresholds: {
         statements: 80,
         branches: 80,

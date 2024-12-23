@@ -60,20 +60,12 @@ export default function HomePage() {
         }}
       >
         <Button
-          data-testid="contact-cta"
           asChild
-          className="rounded-none text-base"
-          size="lg"
-        >
-          <Link href={URLS.CONTACT}>Contact</Link>
-        </Button>
-        <Button
-          asChild
-          className="rounded-none text-base"
+          className="rounded-full text-base"
           size="lg"
           variant="outline"
         >
-          <Link href={URLS.WORK}>My Work</Link>
+          <Link href={URLS.WORK}>SEE ALL WORK</Link>
         </Button>
       </AnimatedElement>
     </div>

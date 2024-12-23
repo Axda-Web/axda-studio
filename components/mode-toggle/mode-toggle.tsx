@@ -15,7 +15,7 @@ export function ModeToggle({ positionAbsolute = false }: ModeToggleProps) {
 
   return (
     <Button
-      className={cn({
+      className={cn("rounded-full", {
         "md:absolute md:right-4 md:bottom-4": positionAbsolute,
       })}
       variant="outline"
@@ -23,13 +23,13 @@ export function ModeToggle({ positionAbsolute = false }: ModeToggleProps) {
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
       {theme === "light" || theme === undefined ? (
-        <Sun
-          data-testid="sun-icon"
+        <Moon
+          data-testid="moon-icon"
           className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
         />
       ) : (
-        <Moon
-          data-testid="moon-icon"
+        <Sun
+          data-testid="sun-icon"
           className="h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
         />
       )}
