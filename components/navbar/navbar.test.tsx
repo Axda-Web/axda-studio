@@ -21,7 +21,11 @@ describe("Navbar", () => {
     expect(screen.getByText("Home")).toBeInTheDocument();
     expect(screen.getByText("Work")).toBeInTheDocument();
     expect(screen.getByText("About")).toBeInTheDocument();
-    expect(screen.getByText("Contact")).toBeInTheDocument();
+  });
+
+  test("should render contact cta", async () => {
+    await Default.run();
+    expect(screen.getByText("CONTACT")).toBeInTheDocument();
   });
 
   test("should render mobile nav on mobile viewport", async () => {

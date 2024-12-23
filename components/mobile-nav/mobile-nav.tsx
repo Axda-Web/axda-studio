@@ -10,7 +10,7 @@ import {
 import { Menu } from "lucide-react";
 
 import { NavItems } from "@/components/nav-items/nav-items";
-import { AxdaStudioLogo } from "../axda-studio-logo";
+import { ContactCta } from "@/components/contact-cta";
 import { ModeToggle } from "../mode-toggle";
 
 export function MobileNav() {
@@ -29,7 +29,7 @@ export function MobileNav() {
           <NavItems inSheet />
           <SheetFooter className="flex flex-row justify-between items-center">
             <SheetClose asChild>
-              <AxdaStudioLogo />
+              <ContactCta />
             </SheetClose>
             <ModeToggle />
           </SheetFooter>
@@ -40,3 +40,4 @@ export function MobileNav() {
 }
 
 // TODO: Fix bug widen the screen when mobile nav is open
+// TODO: Fix close align close button to brand name on mobile
