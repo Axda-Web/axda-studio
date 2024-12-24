@@ -31,9 +31,8 @@ export const Default: Story = {
     const homeNavLink = canvas.getByRole("link", { name: /home/i });
     const workNavLink = canvas.getByRole("link", { name: /^work$/i });
     const aboutNavLink = canvas.getByRole("link", { name: /about/i });
-    const contactNavLink = canvas.getAllByRole("link", { name: /contact/i })[0];
-    const workButton = canvas.getByRole("link", { name: /my work/i });
-    const contactButton = canvas.getAllByRole("link", { name: /contact/i })[1];
+    const contactCTA = canvas.getByRole("link", { name: /CONTACT/i });
+    const workCTA = canvas.getByRole("link", { name: /SEE ALL WORK/i });
     // const themeToggleButton = canvas.getByRole("button", {
     //   name: /toggle theme/i,
     // });
@@ -42,9 +41,8 @@ export const Default: Story = {
     await expect(homeNavLink).toHaveAttribute("href", URLS.HOME);
     await expect(workNavLink).toHaveAttribute("href", URLS.WORK);
     await expect(aboutNavLink).toHaveAttribute("href", URLS.ABOUT);
-    await expect(contactNavLink).toHaveAttribute("href", URLS.CONTACT);
-    await expect(workButton).toHaveAttribute("href", URLS.WORK);
-    await expect(contactButton).toHaveAttribute("href", URLS.CONTACT);
+    await expect(contactCTA).toHaveAttribute("href", URLS.CONTACT);
+    await expect(workCTA).toHaveAttribute("href", URLS.WORK);
     // await expect(themeToggleButton).toHaveAttribute(
     //   "aria-label",
     //   "Toggle theme"
@@ -56,9 +54,8 @@ export const Default: Story = {
       await fireEvent.click(homeNavLink);
       await fireEvent.click(workNavLink);
       await fireEvent.click(aboutNavLink);
-      await fireEvent.click(contactNavLink);
-      await fireEvent.click(workButton);
-      await fireEvent.click(contactButton);
+      await fireEvent.click(workCTA);
+      await fireEvent.click(contactCTA);
       // await fireEvent.click(themeToggleButton);
     });
   },
