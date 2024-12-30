@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
 
 import { MobileNav } from "./mobile-nav";
 
@@ -10,8 +9,6 @@ const meta = {
     layout: "centered",
   },
   tags: ["autodocs"],
-  argTypes: {},
-  args: { onClick: fn() },
 } satisfies Meta<typeof MobileNav>;
 
 export default meta;

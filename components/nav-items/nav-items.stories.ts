@@ -10,8 +10,13 @@ const meta = {
     layout: "centered",
   },
   tags: ["autodocs"],
-  argTypes: {},
-  args: { inSheet: false },
+  argTypes: {
+    inSheet: {
+      control: {
+        type: "boolean",
+      },
+    },
+  },
 } satisfies Meta<typeof NavItems>;
 
 export default meta;

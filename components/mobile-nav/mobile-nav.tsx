@@ -11,7 +11,8 @@ import { Menu } from "lucide-react";
 
 import { NavItems } from "@/components/nav-items/nav-items";
 import { ContactCta } from "@/components/contact-cta";
-import { ModeToggle } from "../mode-toggle";
+import { ThemeToggleBtn } from "../theme-toggle-btn";
+import { cn } from "@/lib/utils";
 
 export function MobileNav() {
   return (
@@ -27,11 +28,16 @@ export function MobileNav() {
         </SheetHeader>
         <div className="flex-1 flex flex-col justify-between">
           <NavItems inSheet />
-          <SheetFooter className="flex flex-row justify-between items-center">
+          <SheetFooter
+            className={cn(
+              "flex flex-row justify-between items-center",
+              "sm:justify-between"
+            )}
+          >
             <SheetClose asChild>
               <ContactCta />
             </SheetClose>
-            <ModeToggle />
+            <ThemeToggleBtn fillColor="foreground" />
           </SheetFooter>
         </div>
       </SheetContent>
@@ -39,5 +45,5 @@ export function MobileNav() {
   );
 }
 
-// TODO: Fix bug widen the screen when mobile nav is open
+// TODO: FIX change viewport size when sheet is open bug
 // TODO: Fix close align close button to brand name on mobile

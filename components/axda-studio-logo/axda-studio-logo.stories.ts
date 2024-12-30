@@ -10,8 +10,6 @@ const meta = {
     layout: "centered",
   },
   tags: ["autodocs"],
-  argTypes: {},
-  args: { onClick: fn() },
 } satisfies Meta<typeof AxdaStudioLogo>;
 
 export default meta;
@@ -19,5 +17,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {},
+  args: {
+    onClick: fn(),
+  },
 };

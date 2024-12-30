@@ -8,6 +8,6 @@ const { Default } = composeStories(Stories);
 describe("ContactCta", () => {
   test("should render contact cta", async () => {
     await Default.run();
-    expect(screen.getByText("CONTACT")).not.toBeNull();
+    expect(screen.getByRole("link", { name: "CONTACT" })).toBeInTheDocument();
   });
 });
