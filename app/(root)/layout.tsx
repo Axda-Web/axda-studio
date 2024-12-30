@@ -9,15 +9,15 @@ export default function HomeLayout({
   return (
     <div
       className={cn(
-        "min-h-screen flex flex-col max-w-7xl mx-auto p-4",
-        "md:px-16",
+        "min-h-[calc(100vh-48.5px)] flex flex-col max-w-7xl mx-auto p-4",
+        "md:px-16 md:py-0",
         "xl:px-0"
       )}
     >
       <Navbar />
-      <main className="flex-1 flex justify-center items-center">
-        {children}
-      </main>
+      <main>{children}</main>
     </div>
   );
 }
+
+// TODO: Increase the max width of the global container

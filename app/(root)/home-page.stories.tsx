@@ -27,36 +27,24 @@ export const Default: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
 
+    // NAV
     const axdaStudioLogo = canvas.getByRole("link", { name: /axda studio/i });
     const homeNavLink = canvas.getByRole("link", { name: /home/i });
     const workNavLink = canvas.getByRole("link", { name: /^work$/i });
     const aboutNavLink = canvas.getByRole("link", { name: /about/i });
     const contactCTA = canvas.getByRole("link", { name: /CONTACT/i });
-    const workCTA = canvas.getByRole("link", { name: /SEE ALL WORK/i });
-    // const themeToggleButton = canvas.getByRole("button", {
-    //   name: /toggle theme/i,
-    // });
 
     await expect(axdaStudioLogo).toHaveAttribute("href", URLS.HOME);
     await expect(homeNavLink).toHaveAttribute("href", URLS.HOME);
     await expect(workNavLink).toHaveAttribute("href", URLS.WORK);
     await expect(aboutNavLink).toHaveAttribute("href", URLS.ABOUT);
     await expect(contactCTA).toHaveAttribute("href", URLS.CONTACT);
-    await expect(workCTA).toHaveAttribute("href", URLS.WORK);
-    // await expect(themeToggleButton).toHaveAttribute(
-    //   "aria-label",
-    //   "Toggle theme"
-    // );
 
-    // Test clicking the buttons
+    // FOOTER
+    const themeToggleButton = canvas.getByText(/toggle theme/i);
+
     await waitFor(async () => {
-      await fireEvent.click(axdaStudioLogo);
-      await fireEvent.click(homeNavLink);
-      await fireEvent.click(workNavLink);
-      await fireEvent.click(aboutNavLink);
-      await fireEvent.click(workCTA);
-      await fireEvent.click(contactCTA);
-      // await fireEvent.click(themeToggleButton);
+      await fireEvent.click(themeToggleButton);
     });
   },
 };

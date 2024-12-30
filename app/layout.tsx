@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 import { ThemeProvider } from "@/app/providers/theme-provider";
-import { ModeToggle } from "@/components/mode-toggle";
+import { Footer } from "@/components/footer";
 
 const interSans = localFont({
   src: "./fonts/Inter.ttf",
@@ -39,7 +39,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
-          <ModeToggle positionAbsolute />
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

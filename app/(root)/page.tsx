@@ -4,22 +4,22 @@ import Link from "next/link";
 
 import { URLS } from "@/constants/nav";
 import { AnimatedElement } from "@/components/animated-element";
+import { UIIllustration } from "@/components/ui-illustration";
 
 export default function HomePage() {
   return (
     <div
       className={cn(
-        "flex h-full flex-col justify-center items-center max-w-3xl mx-auto gap-y-6",
-        "md:gap-y-8",
-        "lg:gap-y-10"
+        "flex mt-28 flex-col justify-center items-center max-w-5xl mx-auto gap-y-6",
+        "md:gap-y-8"
       )}
     >
       <AnimatedElement
         as="h1"
         className={cn(
-          "font-knewave text-5xl text-center",
-          "md:text-6xl",
-          "lg:text-8xl"
+          "font-black text-4xl text-center",
+          "md:text-7xl",
+          "lg:text-9xl"
         )}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -28,7 +28,7 @@ export default function HomePage() {
           ease: "easeOut",
         }}
       >
-        Fast, Robust, and Elegant UI.
+        Fast, Robust, & Elegant <UIIllustration />.
       </AnimatedElement>
       <AnimatedElement
         as="p"
@@ -61,7 +61,7 @@ export default function HomePage() {
       >
         <Button
           asChild
-          className="rounded-full text-base"
+          className="rounded-full text-base border-foreground"
           size="lg"
           variant="outline"
         >
@@ -71,3 +71,6 @@ export default function HomePage() {
     </div>
   );
 }
+
+// TODO: Change font size | font weight | font family of the hero section subtitle
+// TODO: Improve responsiveness of the hero section title (adjust max-width of the container)

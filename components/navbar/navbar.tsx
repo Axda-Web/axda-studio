@@ -7,9 +7,7 @@ import { ContactCta } from "@/components/contact-cta";
 
 export function Navbar() {
   return (
-    <nav
-      className={cn("flex justify-between items-center", "md:mt-6", "lg:mt-8")}
-    >
+    <nav className={cn("flex justify-between items-center", "md:mt-6")}>
       <AxdaStudioLogo />
       <div className={cn("hidden", "md:block")}>
         <NavItems />
@@ -21,3 +19,5 @@ export function Navbar() {
     </nav>
   );
 }
+
+// TODO: Adjust logo size

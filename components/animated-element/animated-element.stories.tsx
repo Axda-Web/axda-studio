@@ -17,8 +17,34 @@ const meta = {
     layout: "centered",
   },
   tags: ["autodocs"],
-  argTypes: {},
-  args: {},
+  argTypes: {
+    as: {
+      control: {
+        type: "select",
+        options: ["h1", "h2", "h3", "h4", "h5", "h6", "p", "span"],
+      },
+    },
+    initial: {
+      control: {
+        type: "object",
+      },
+    },
+    animate: {
+      control: {
+        type: "object",
+      },
+    },
+    transition: {
+      control: {
+        type: "object",
+      },
+    },
+    children: {
+      control: {
+        type: "text",
+      },
+    },
+  },
 } satisfies Meta<typeof AnimatedElement>;
 
 export default meta;

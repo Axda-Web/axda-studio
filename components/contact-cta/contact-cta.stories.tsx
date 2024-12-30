@@ -9,8 +9,6 @@ const meta = {
     layout: "centered",
   },
   tags: ["autodocs"],
-  argTypes: {},
-  args: {},
 } satisfies Meta<typeof ContactCta>;
 
 export default meta;
