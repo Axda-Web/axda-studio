@@ -4,6 +4,7 @@ import HomeLayout from "../app/(root)/layout";
 import localFont from "next/font/local";
 import { ThemeProvider } from "@/app/providers/theme-provider";
 import { Sheet } from "@/components/ui/sheet";
+import { Footer } from "@/components/footer";
 
 const interSans = localFont({
   src: "../app/fonts/Inter.ttf",
@@ -33,6 +34,7 @@ export const withRootLayoutDecorator: Decorator = (Story) => (
 export const withHomeLayoutDecorator: Decorator = (Story) => (
   <HomeLayout>
     <Story />
+    <Footer />
   </HomeLayout>
 );
 

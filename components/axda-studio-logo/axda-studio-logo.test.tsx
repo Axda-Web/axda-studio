@@ -8,6 +8,8 @@ const { Default } = composeStories(Stories);
 describe("AxdaStudioLogo", () => {
   test("should render axda studio logo", async () => {
     await Default.run();
-    expect(screen.getByText("Axda Studio Logo")).not.toBeNull();
+    expect(
+      screen.getByRole("link", { name: "Axda Studio Logo" })
+    ).toBeInTheDocument();
   });
 });

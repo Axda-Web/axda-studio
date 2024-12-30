@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
 import { cn } from "@/lib/utils";
 
 import { Navbar } from "./navbar";
@@ -18,8 +17,6 @@ const meta = {
     layout: "padded",
   },
   tags: ["autodocs"],
-  argTypes: {},
-  args: { onClick: fn() },
 } satisfies Meta<typeof Navbar>;
 
 export default meta;
