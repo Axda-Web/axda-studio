@@ -4,6 +4,7 @@ import "./globals.css";
 
 import { ThemeProvider } from "@/app/providers/theme-provider";
 import { Footer } from "@/components/footer";
+import { Toaster } from "@/components/ui/toaster";
 
 const interSans = localFont({
   src: "./fonts/Inter.ttf",
@@ -40,6 +41,7 @@ export default function RootLayout({
         >
           {children}
           <Footer />
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
