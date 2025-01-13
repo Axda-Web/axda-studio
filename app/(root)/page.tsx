@@ -33,9 +33,9 @@ export default function HomePage() {
       <AnimatedElement
         as="p"
         className={cn(
-          "text-center text-xl leading-6 mx-auto font-medium",
+          "text-center text-xl leading-6 mx-auto",
           "md:text-2xl md:max-w-xl",
-          "lg:max-w-2xl"
+          "lg:text-3xl lg:max-w-3xl"
         )}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
