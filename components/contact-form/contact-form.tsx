@@ -9,6 +9,7 @@ import { useToast } from "@/hooks/use-toast";
 import { ToastAction } from "@/components/ui/toast";
 
 // TODO: Handle server side form validation
+// TODO: Handle submit button state + icons
 
 import {
   Form,
@@ -60,6 +61,7 @@ export function ContactForm() {
   const { execute } = useAction(contactAction, {
     onSuccess: () => {
       toast({
+        variant: "default",
         title: "Message sent",
         description: "Talk to you soon!",
       });
@@ -67,7 +69,7 @@ export function ContactForm() {
     onError: () => {
       toast({
         variant: "destructive",
-        title: "Uh oh! Something went wrong.",
+        title: "Uh oh! Something went wrong",
         description: "There was a problem with your request.",
         action: (
           <ToastAction
