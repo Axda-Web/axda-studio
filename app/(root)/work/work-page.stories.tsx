@@ -5,6 +5,8 @@ import { URLS } from "../../../constants/nav";
 
 import WorkPage from "./page";
 
+// TODO: Add mocked data using msw (don't forget loading, error & no data states)
+
 const meta = {
   title: "SCREENS/WorkPage",
   component: WorkPage,

@@ -10,6 +10,8 @@ export const metadata: Metadata = {
     "Get in touch with a creative web developer specializing in fast, robust, and beautiful interfaces. Let's bring your ideas to life together!",
 };
 
+// TODO: Add svg pattern background behind the contact form
+
 export default function ContactPage() {
   return (
     <div
