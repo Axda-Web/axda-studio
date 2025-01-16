@@ -26,7 +26,7 @@ export const contactAction = actionClient
     // TODO: Handle server side form validation
     // TODO: Save to database AND/OR send email (Resend)
 
-    // throw new Error("Test error");
+    throw new Error("Test error");
 
     return { message: `Hello ${username}!` };
   });
