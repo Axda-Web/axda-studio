@@ -19,7 +19,7 @@ export function ContactCta({ className }: ContactCtaProps) {
       data-testid="contact-cta"
       asChild
       className={cn(
-        "rounded-full text-base",
+        "rounded-full text-base bg-sky-400 hover:bg-sky-400/90",
         {
           "bg-transparent text-foreground border border-foreground hover:bg-transparent hover:text-foreground hover:border-foreground hover:cursor-s-resize":
             pathname === URLS.CONTACT,

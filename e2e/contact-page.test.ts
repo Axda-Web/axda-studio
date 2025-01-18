@@ -3,7 +3,7 @@ import { test, expect } from "@playwright/test";
 // TODO: Add server side form validation tests
 // TODO: Add error toast test
 
-test.describe("Home page", () => {
+test.describe("Contact page", () => {
   test.beforeEach(async ({ page }) => {
     await page.goto("http://localhost:3000/contact");
   });
