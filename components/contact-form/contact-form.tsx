@@ -96,7 +96,9 @@ export function ContactForm() {
             <FormItem>
               <FormControl>
                 <Input
-                  className={cn("border border-foreground p-4 rounded")}
+                  className={cn(
+                    "p-4 rounded bg-background placeholder:text-sky-400"
+                  )}
                   placeholder="NAME"
                   type="text"
                   {...field}
@@ -113,7 +115,9 @@ export function ContactForm() {
             <FormItem>
               <FormControl>
                 <Input
-                  className={cn("border border-foreground p-4 rounded")}
+                  className={cn(
+                    "p-4 rounded bg-background placeholder:text-sky-400"
+                  )}
                   placeholder="EMAIL"
                   type="email"
                   {...field}
@@ -130,7 +134,9 @@ export function ContactForm() {
             <FormItem>
               <FormControl>
                 <Input
-                  className={cn("border border-foreground p-4 rounded")}
+                  className={cn(
+                    "p-4 rounded bg-background placeholder:text-sky-400"
+                  )}
                   placeholder="PHONE"
                   type="tel"
                   {...field}
@@ -148,7 +154,7 @@ export function ContactForm() {
               <FormControl>
                 <Textarea
                   className={cn(
-                    "border border-foreground p-4 resize-none rounded"
+                    "p-4 resize-none rounded bg-background placeholder:text-sky-400"
                   )}
                   placeholder="MESSAGE"
                   rows={7}
@@ -160,7 +166,9 @@ export function ContactForm() {
           )}
         />
         <Button
-          className={cn("rounded-full text-base px-8 self-end")}
+          className={cn(
+            "rounded-full text-base px-8 self-end bg-sky-400 hover:bg-sky-400/90"
+          )}
           type="submit"
         >
           SUBMIT <ArrowRight className="w-4 h-4" />
