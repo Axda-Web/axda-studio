@@ -18,7 +18,7 @@ export default function ContactPage() {
       className={cn(
         "flex flex-col mt-10 gap-y-4 mb-6",
         "md:gap-y-10",
-        "xl:flex-row xl:gap-x-24 xl:mt-32"
+        "xl:flex-row xl:items-center xl:gap-x-24 xl:mt-32"
       )}
     >
       <div className={cn("space-y-4", "lg:flex-1")}>
@@ -50,7 +50,7 @@ export default function ContactPage() {
         </AnimatedElement>
       </div>
       <AnimatedElement
-        className={cn("lg:flex-1")}
+        className={cn("lg:flex-1 p-8 bg-sky-400/20 rounded-3xl")}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
