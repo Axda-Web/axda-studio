@@ -86,6 +86,7 @@ export function ContactForm() {
   return (
     <Form {...form}>
       <form
+        data-testid="contact-form"
         onSubmit={form.handleSubmit(onSubmit)}
         className="space-y-4 flex flex-col"
       >

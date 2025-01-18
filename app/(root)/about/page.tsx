@@ -22,8 +22,9 @@ export default function AboutPage() {
         }}
       >
         <Image
+          data-testid="about-dev-illustration"
           src="/svg/about/dev.svg"
-          alt="About mockup"
+          alt="dev illustration"
           width={550}
           height={550}
           className={cn("block flex-1 lg:h-[550px] w-auto")}
