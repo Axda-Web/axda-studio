@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { AnimatedElement } from "@/components/animated-element";
 
+// TODO: Review responsiveness appearance (mobile & tablet)
+// TODO: Replace illustration by portrait photo
+
 export const metadata: Metadata = {
   title: "Axda Studio Dev | About",
   description:
@@ -11,9 +14,11 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <section className={cn("mt-10 flex items-center", "lg:mt-16")}>
+    <section
+      className={cn("mt-10 flex flex-col items-center", "lg:flex-row lg:mt-16")}
+    >
       <AnimatedElement
-        className={cn("flex-1")}
+        className={cn("flex-1 hidden", "xl:block")}
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{
@@ -44,7 +49,7 @@ export default function AboutPage() {
           ABOUT
         </AnimatedElement>
         <AnimatedElement
-          className={cn("lg:space-y-3 lg:text-justify")}
+          className={cn("space-y-3 text-xl text-justify", "md:text-2xl")}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -68,7 +73,9 @@ export default function AboutPage() {
             Marketing and Design, enabling me to approach projects holistically
             and deliver solutions that truly resonate.
           </p>
-          <p>Let&apos;s create something exceptional together!</p>
+          <p className={cn("font-bold")}>
+            Let&apos;s create something exceptional together!
+          </p>
         </AnimatedElement>
       </div>
     </section>
