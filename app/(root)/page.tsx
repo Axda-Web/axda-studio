@@ -6,6 +6,10 @@ import { URLS } from "@/constants/nav";
 import { AnimatedElement } from "@/components/animated-element";
 import { UIIllustration } from "@/components/ui-illustration";
 
+// TODO: Change font size | font weight | font family of the hero section subtitle
+// TODO: Improve responsiveness of the hero section title (adjust max-width of the container)
+// TODO: Add Performance, Robustness, Accessibility, Aesthetics sections (with scrol animations + sticky header)
+
 export default function HomePage() {
   return (
     <div
@@ -71,6 +75,3 @@ export default function HomePage() {
     </div>
   );
 }
-
-// TODO: Change font size | font weight | font family of the hero section subtitle
-// TODO: Improve responsiveness of the hero section title (adjust max-width of the container)

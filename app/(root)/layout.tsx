@@ -1,6 +1,9 @@
 import { Navbar } from "@/components/navbar";
 import { cn } from "@/lib/utils";
 
+// TODO: Increase the max width of the global container
+// TODO: Center verticaly the main content of each page?
+
 export default function HomeLayout({
   children,
 }: Readonly<{
@@ -19,5 +22,3 @@ export default function HomeLayout({
     </div>
   );
 }
-
-// TODO: Increase the max width of the global container

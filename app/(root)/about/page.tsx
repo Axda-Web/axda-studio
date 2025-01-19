@@ -5,6 +5,7 @@ import { AnimatedElement } from "@/components/animated-element";
 
 // TODO: Review responsiveness appearance (mobile & tablet)
 // TODO: Replace illustration by portrait photo
+// TODO: Add a 'tech stack' section
 
 export const metadata: Metadata = {
   title: "Axda Studio Dev | About",

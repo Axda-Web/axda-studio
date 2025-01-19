@@ -98,7 +98,7 @@ export function ContactForm() {
               <FormControl>
                 <Input
                   className={cn(
-                    "p-4 rounded bg-background placeholder:text-sky-400"
+                    "p-4 rounded bg-background placeholder:text-sky-400 focus-visible:ring-1 focus-visible:ring-sky-400"
                   )}
                   placeholder="NAME"
                   type="text"
@@ -117,7 +117,7 @@ export function ContactForm() {
               <FormControl>
                 <Input
                   className={cn(
-                    "p-4 rounded bg-background placeholder:text-sky-400"
+                    "p-4 rounded bg-background placeholder:text-sky-400 focus-visible:ring-1 focus-visible:ring-sky-400"
                   )}
                   placeholder="EMAIL"
                   type="email"
@@ -136,7 +136,7 @@ export function ContactForm() {
               <FormControl>
                 <Input
                   className={cn(
-                    "p-4 rounded bg-background placeholder:text-sky-400"
+                    "p-4 rounded bg-background placeholder:text-sky-400 focus-visible:ring-1 focus-visible:ring-sky-400"
                   )}
                   placeholder="PHONE"
                   type="tel"
@@ -155,7 +155,7 @@ export function ContactForm() {
               <FormControl>
                 <Textarea
                   className={cn(
-                    "p-4 resize-none rounded bg-background placeholder:text-sky-400"
+                    "p-4 resize-none rounded bg-background placeholder:text-sky-400 focus-visible:ring-1 focus-visible:ring-sky-400"
                   )}
                   placeholder="MESSAGE"
                   rows={7}

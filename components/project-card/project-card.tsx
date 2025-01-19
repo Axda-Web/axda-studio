@@ -4,8 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
-import { Github, Play } from "lucide-react";
+import { /* Github */ Play } from "lucide-react";
 import { motion } from "motion/react";
+
+// TODO: Find a better see live project button icon
+// TODO: Find a better way to display the github button
+// TODO: Completely remove the github button
+// TODO: Add a better hover effect to the project card (button 'see project details')
 
 const MotionImage = motion(Image);
 
@@ -21,7 +26,7 @@ export function ProjectCard({
   projectId,
   projectTitle,
   projectImage,
-  projectGithubLink,
+  // projectGithubLink,
   projectLiveLink,
 }: ProjectCardProps) {
   return (
@@ -74,11 +79,7 @@ export function ProjectCard({
           {projectTitle.toUpperCase()}
         </h2>
         <div className="flex items-center gap-x-2">
-          <Button
-            asChild
-            variant="link"
-            className="rounded-full px-2.5 cursor-pointer border-foreground"
-          >
+          {/* <Button asChild variant="link" className="rounded-full px-2.5">
             <a
               data-testid={`project-card-github-link-${projectTitle}`}
               href={projectGithubLink}
@@ -87,8 +88,8 @@ export function ProjectCard({
             >
               <Github data-testid="project-card-github-icon" />
             </a>
-          </Button>
-          <Button asChild className="rounded-full px-2.5 cursor-pointer">
+          </Button> */}
+          <Button asChild className="rounded-full px-2.5">
             <a
               data-testid={`project-card-play-button-${projectTitle}`}
               href={projectLiveLink}
@@ -103,6 +104,3 @@ export function ProjectCard({
     </article>
   );
 }
-
-// TODO: Find a better see live project button icon
-// TODO: Find a better way to display the github button
