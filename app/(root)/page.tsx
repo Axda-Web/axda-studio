@@ -65,7 +65,7 @@ export default function HomePage() {
       >
         <Button
           asChild
-          className="rounded-full text-base text-sky-400 border-sky-400 hover:text-sky-400"
+          className="rounded-full text-base text-foreground border-foreground hover:text-foreground hover:bg-foreground/10"
           size="lg"
           variant="outline"
         >

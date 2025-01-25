@@ -14,20 +14,17 @@ describe("ProjectsSection", () => {
     const images = screen.getAllByRole("img");
 
     expect(headings).toHaveLength(9);
-    expect(links).toHaveLength(27);
+    expect(links).toHaveLength(18);
     expect(images).toHaveLength(27);
 
     for (let i = 0; i < 9; i++) {
-      const projectIndex = i * 3;
+      const projectIndex = i;
 
-      expect(links[projectIndex]).toHaveAttribute("href", `/work/${i + 1}`);
+      // Check project detail link
+      expect(links[projectIndex * 2]).toHaveAttribute("href", `/work/${i + 1}`);
 
-      expect(links[projectIndex + 1]).toHaveAttribute(
-        "href",
-        "https://github.com/Axda-Web/axda-studio"
-      );
-
-      expect(links[projectIndex + 2]).toHaveAttribute(
+      // Check live project link
+      expect(links[projectIndex * 2 + 1]).toHaveAttribute(
         "href",
         "https://axda-studio.vercel.app/"
       );
