@@ -1,8 +1,15 @@
 import { test, expect } from "@playwright/test";
+import { HeaderFixture } from "./fixtures/header";
+import { FooterFixture } from "./fixtures/footer";
 
 test.describe("Home page", () => {
+  let header: HeaderFixture;
+  let footer: FooterFixture;
+
   test.beforeEach(async ({ page }) => {
     await page.goto("http://localhost:3000/");
+    header = new HeaderFixture(page);
+    footer = new FooterFixture(page);
   });
 
   test("should have a title", async ({ page }) => {
@@ -13,45 +20,12 @@ test.describe("Home page", () => {
     await expect(page).toHaveURL("http://localhost:3000/");
   });
 
-  test.describe("Navbar", () => {
-    test("should have the Axda Studio logo", async ({ page }) => {
-      const axdaStudioLogo = page.getByRole("link", {
-        name: "Axda Studio Logo",
-      });
-      await expect(axdaStudioLogo).toBeVisible();
-
-      await axdaStudioLogo.click();
-      await expect(page).toHaveURL("http://localhost:3000/");
-    });
-
-    test("should have the NavItems", async ({ page }) => {
-      const homeNavItem = page.getByRole("link", { name: "Home" });
-      const workNavItem = page.getByRole("link", { name: /^Work$/ });
-      const aboutNavItem = page.getByRole("link", { name: "About" });
-
-      await expect(homeNavItem).toBeVisible();
-      await expect(workNavItem).toBeVisible();
-      await expect(aboutNavItem).toBeVisible();
-
-      await homeNavItem.click();
-      await expect(page).toHaveURL("http://localhost:3000/");
-
-      await workNavItem.click();
-      await expect(page).toHaveURL("http://localhost:3000/work");
-
-      await aboutNavItem.click();
-      await expect(page).toHaveURL("http://localhost:3000/about");
-    });
+  test("should have a valid header", async () => {
+    await header.validateEntireHeader();
   });
 
-  test("should have contact cta", async ({ page }) => {
-    const contactCTA = page.getByTestId("contact-cta").filter({
-      hasText: "CONTACT",
-    });
-    await expect(contactCTA).toBeVisible();
-
-    await contactCTA.click();
-    await expect(page).toHaveURL("http://localhost:3000/contact");
+  test("should have a valid footer", async () => {
+    await footer.validateEntireFooter();
   });
 
   test.describe("Hero section", () => {

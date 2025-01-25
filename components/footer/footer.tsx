@@ -11,7 +11,12 @@ export function Footer() {
         <div className="text-background">
           <span>© </span>
           <span className="font-bold">{new Date().getFullYear()} | </span>
-          <span className={cn("font-knewave text-lg")}>Axda Studio</span>
+          <span
+            data-testid="footer-brand-name"
+            className={cn("font-knewave text-lg")}
+          >
+            Axda Studio
+          </span>
         </div>
         <ThemeToggleBtn fillColor="background" />
       </div>

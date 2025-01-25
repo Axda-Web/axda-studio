@@ -8,7 +8,7 @@ const { Default } = composeStories(Stories);
 describe("ProjectCard", () => {
   test("should render project card", async () => {
     await Default.run();
-    expect(screen.getAllByRole("link")).toHaveLength(3);
+    expect(screen.getAllByRole("link")).toHaveLength(2);
 
     const projectImage = screen.getAllByRole("img")[0];
     expect(projectImage).toBeInTheDocument();
@@ -20,13 +20,7 @@ describe("ProjectCard", () => {
     const projectDetailsLink = screen.getAllByRole("link")[0];
     expect(projectDetailsLink).toHaveAttribute("href", "/work/1");
 
-    const projectGithubLink = screen.getAllByRole("link")[1];
-    expect(projectGithubLink).toHaveAttribute(
-      "href",
-      "https://github.com/axda-studio"
-    );
-
-    const projectLiveLink = screen.getAllByRole("link")[2];
+    const projectLiveLink = screen.getAllByRole("link")[1];
     expect(projectLiveLink).toHaveAttribute("href", "https://axda-studio.com");
 
     expect(

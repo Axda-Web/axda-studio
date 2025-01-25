@@ -17,6 +17,7 @@ export function AnimatedElement({
   animate,
   transition,
   className,
+  ...props
 }: AnimatedElementProps) {
   const MotionComponent = motion[as as keyof typeof motion] || motion.div;
   return (
@@ -25,6 +26,7 @@ export function AnimatedElement({
       initial={initial}
       animate={animate}
       transition={transition}
+      {...props}
     >
       {children}
     </MotionComponent>
