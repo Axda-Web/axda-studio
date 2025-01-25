@@ -3,6 +3,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { AnimatedElement } from "@/components/animated-element";
 
+// TODO: Review responsiveness appearance (mobile & tablet)
+// TODO: Replace illustration by portrait photo
+// TODO: Add a 'tech stack' section
+
 export const metadata: Metadata = {
   title: "Axda Studio Dev | About",
   description:
@@ -11,9 +15,11 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <section className={cn("mt-10 flex items-center", "lg:mt-16")}>
+    <section
+      className={cn("my-10 flex flex-col items-center", "lg:flex-row lg:mt-16")}
+    >
       <AnimatedElement
-        className={cn("flex-1")}
+        className={cn("flex-1 hidden", "xl:block")}
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{
@@ -30,7 +36,7 @@ export default function AboutPage() {
           className={cn("block flex-1 lg:h-[550px] w-auto")}
         />
       </AnimatedElement>
-      <div className={cn("lg:flex-1 self-start text-2xl")}>
+      <div className={cn("lg:flex-1 self-start")}>
         <AnimatedElement
           as="h1"
           className={cn("text-6xl font-bold", "md:text-7xl", "md:text-9xl")}
@@ -43,33 +49,65 @@ export default function AboutPage() {
         >
           ABOUT
         </AnimatedElement>
-        <AnimatedElement
-          className={cn("lg:space-y-3 lg:text-justify")}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.8,
-            ease: "easeOut",
-            delay: 0.2,
-          }}
+        <div
+          className={cn("space-y-3 text-justify", "sm:text-xl", "md:text-2xl")}
         >
-          <p>
+          <AnimatedElement
+            as="p"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.8,
+              ease: "easeOut",
+              delay: 0.2,
+            }}
+          >
             I am a Frontend Developer with five years dedicated to building
             digital experiences that prioritize performance, scalability, and
             visual excellence.
-          </p>
-          <p>
+          </AnimatedElement>
+          <AnimatedElement
+            as="p"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.8,
+              ease: "easeOut",
+              delay: 0.3,
+            }}
+          >
             My journey has taken me across borders, working in dynamic tech hubs
             like Dublin and Amsterdam, where I&apos;ve honed my skills and
             embraced diverse perspectives.
-          </p>
-          <p>
+          </AnimatedElement>
+          <AnimatedElement
+            as="p"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.8,
+              ease: "easeOut",
+              delay: 0.4,
+            }}
+          >
             Beyond development, I leverage valuable expertise in Psychology,
             Marketing and Design, enabling me to approach projects holistically
             and deliver solutions that truly resonate.
-          </p>
-          <p>Let&apos;s create something exceptional together!</p>
-        </AnimatedElement>
+          </AnimatedElement>
+          <AnimatedElement
+            as="p"
+            className={cn("font-bold")}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.8,
+              ease: "easeOut",
+              delay: 0.5,
+            }}
+          >
+            Let&apos;s create something exceptional together!
+          </AnimatedElement>
+        </div>
       </div>
     </section>
   );

@@ -1,13 +1,11 @@
-"use client";
-
-import Link from "next/link";
-import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
-import { Github, Play } from "lucide-react";
-import { motion } from "motion/react";
+import { Play } from "lucide-react";
+import { MotionLink } from "@/components/motion-link";
+import Image from "next/image";
 
-const MotionImage = motion(Image);
+// TODO: Find a better see live project button icon
+// TODO: rename motion-image file
 
 interface ProjectCardProps {
   projectId: number;
@@ -21,74 +19,66 @@ export function ProjectCard({
   projectId,
   projectTitle,
   projectImage,
-  projectGithubLink,
   projectLiveLink,
 }: ProjectCardProps) {
   return (
     <article>
-      <Link
-        data-testid={`project-card-link-${projectTitle}`}
-        className="block overflow-hidden max-w-full"
-        href={`/work/${projectId}`}
-      >
-        <MotionImage
+      <div className={cn("overflow-hidden")}>
+        <MotionLink
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
-          src={projectImage}
-          alt={projectTitle}
-          width={735}
-          height={735}
-          className={cn(
-            "block w-full max-w-[735px] max-h-[735px] object-cover object-center aspect-square",
-            "md:hidden"
-          )}
-        />
-        <MotionImage
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.2 }}
-          src={projectImage}
-          alt={projectTitle}
-          width={440}
-          height={440}
-          className={cn(
-            "hidden object-cover object-center aspect-square w-full",
-            "md:block md:max-w-[440px] md:max-h-[440px]",
-            "lg:hidden"
-          )}
-        />
-        <MotionImage
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.2 }}
-          src={projectImage}
-          alt={projectTitle}
-          width={416}
-          height={416}
-          className={cn(
-            "hidden object-cover object-center aspect-square w-full",
-            "lg:block lg:max-w-[416px] lg:max-h-[416px]"
-          )}
-        />
-      </Link>
+          data-testid={`project-card-link-${projectTitle}`}
+          className="group block overflow-hidden max-w-full relative"
+          href={`/work/${projectId}`}
+        >
+          <Image
+            src={projectImage}
+            alt={projectTitle}
+            width={735}
+            height={735}
+            className={cn(
+              "block w-full max-w-[735px] max-h-[735px] object-cover object-center aspect-square",
+              "md:hidden"
+            )}
+          />
+          <Image
+            src={projectImage}
+            alt={projectTitle}
+            width={440}
+            height={440}
+            className={cn(
+              "hidden object-cover object-center aspect-square w-full",
+              "md:block md:max-w-[440px] md:max-h-[440px]",
+              "lg:hidden"
+            )}
+          />
+          <Image
+            src={projectImage}
+            alt={projectTitle}
+            width={416}
+            height={416}
+            className={cn(
+              "hidden object-cover object-center aspect-square w-full",
+              "lg:block lg:max-w-[416px] lg:max-h-[416px]"
+            )}
+          />
+          <div className="absolute inset-0 group-hover:bg-black/50 transition-colors flex items-center justify-center">
+            <span
+              className={cn(
+                "text-transparent group-hover:text-white transition-colors underline underline-offset-4 font-semibold"
+              )}
+            >
+              SEE PROJECT DETAILS
+            </span>
+          </div>
+        </MotionLink>
+      </div>
       <div className="flex justify-between items-center py-2">
         <h2 className={cn("font-bold text-xl")}>
           {projectTitle.toUpperCase()}
         </h2>
         <div className="flex items-center gap-x-2">
-          <Button
-            asChild
-            variant="link"
-            className="rounded-full px-2.5 cursor-pointer border-foreground"
-          >
-            <a
-              data-testid={`project-card-github-link-${projectTitle}`}
-              href={projectGithubLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Github data-testid="project-card-github-icon" />
-            </a>
-          </Button>
-          <Button asChild className="rounded-full px-2.5 cursor-pointer">
+          <Button asChild className="rounded-full px-2.5">
             <a
               data-testid={`project-card-play-button-${projectTitle}`}
               href={projectLiveLink}
@@ -103,6 +93,3 @@ export function ProjectCard({
     </article>
   );
 }
-
-// TODO: Find a better see live project button icon
-// TODO: Find a better way to display the github button
