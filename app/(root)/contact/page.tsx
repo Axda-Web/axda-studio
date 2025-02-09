@@ -24,7 +24,12 @@ export default function ContactPage() {
       <div className={cn("space-y-4", "lg:flex-1")}>
         <AnimatedElement
           as="h1"
-          className={cn("text-6xl font-bold", "md:text-7xl", "md:text-9xl")}
+          className={cn(
+            "text-6xl font-bold",
+            "md:text-7xl",
+            "md:text-9xl",
+            "lg:font-bold"
+          )}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -51,7 +56,7 @@ export default function ContactPage() {
       </div>
       <AnimatedElement
         className={cn(
-          "p-2 bg-foreground/20 rounded-md",
+          "px-2 py-4 bg-foreground/20 rounded-md",
           "md:p-8 md:rounded-3xl",
           "xl:flex-1"
         )}

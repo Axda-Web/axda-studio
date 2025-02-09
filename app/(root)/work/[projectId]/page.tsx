@@ -5,6 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Github, Play } from "lucide-react";
 import { MotionImage } from "@/components/motion-image";
 
+// TODO: Add placeholder image
+// TODO: Add real data
+
 export default function ProjectPage() {
   const mockedProjectData = {
     id: 3,
@@ -61,6 +64,8 @@ export default function ProjectPage() {
             "block object-cover object-center aspect-square",
             "md:hidden"
           )}
+          placeholder="blur"
+          blurDataURL="https://placehold.co/550x550"
         />
         <MotionImage
           whileHover={{ scale: 1.05 }}
@@ -74,6 +79,8 @@ export default function ProjectPage() {
             "md:block",
             "xl:hidden"
           )}
+          placeholder="blur"
+          blurDataURL="https://placehold.co/1000x1000"
         />
         <MotionImage
           whileHover={{ scale: 1.05 }}
@@ -86,6 +93,8 @@ export default function ProjectPage() {
             "hidden object-cover object-center aspect-square",
             "xl:block xl:h-[550px] xl:aspect-square"
           )}
+          placeholder="blur"
+          blurDataURL="https://placehold.co/550x550"
         />
       </AnimatedElement>
       <div
