@@ -29,8 +29,8 @@ export default function AboutPage() {
       >
         <Image
           data-testid="about-dev-illustration"
-          src="/svg/about/dev.svg"
-          alt="dev illustration"
+          src="/svg/about/avatar.svg"
+          alt="avatar illustration"
           width={550}
           height={550}
           className={cn("block flex-1 lg:h-[550px] w-auto")}
@@ -39,7 +39,12 @@ export default function AboutPage() {
       <div className={cn("lg:flex-1 self-start")}>
         <AnimatedElement
           as="h1"
-          className={cn("text-6xl font-bold", "md:text-7xl", "md:text-9xl")}
+          className={cn(
+            "text-6xl font-bold",
+            "md:text-7xl",
+            "md:text-9xl",
+            "lg:font-bold"
+          )}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -50,7 +55,7 @@ export default function AboutPage() {
           ABOUT
         </AnimatedElement>
         <div
-          className={cn("space-y-3 text-justify", "sm:text-xl", "md:text-2xl")}
+          className={cn("space-y-3 text-justify", "sm:text-xl", "md:text-xl")}
         >
           <AnimatedElement
             as="p"
@@ -78,7 +83,9 @@ export default function AboutPage() {
           >
             My journey has taken me across borders, working in dynamic tech hubs
             like Dublin and Amsterdam, where I&apos;ve honed my skills and
-            embraced diverse perspectives.
+            embraced diverse perspectives. I’ve collaborated on projects
+            spanning SaaS, e-commerce, and media tech, building products that
+            grow and drive impact.
           </AnimatedElement>
           <AnimatedElement
             as="p"
@@ -90,6 +97,8 @@ export default function AboutPage() {
               delay: 0.4,
             }}
           >
+            As a React expert, I specialize in crafting modern web applications
+            with Nextjs and building seamless mobile experiences using Expo.
             Beyond development, I leverage valuable expertise in Psychology,
             Marketing and Design, enabling me to approach projects holistically
             and deliver solutions that truly resonate.

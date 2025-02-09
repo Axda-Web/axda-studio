@@ -6,6 +6,7 @@ import Image from "next/image";
 
 // TODO: Find a better see live project button icon
 // TODO: rename motion-image file
+// TODO: Add placeholder image
 
 interface ProjectCardProps {
   projectId: number;
@@ -40,6 +41,8 @@ export function ProjectCard({
               "block w-full max-w-[735px] max-h-[735px] object-cover object-center aspect-square",
               "md:hidden"
             )}
+            placeholder="blur"
+            blurDataURL="https://placehold.co/735x735"
           />
           <Image
             src={projectImage}
@@ -51,6 +54,8 @@ export function ProjectCard({
               "md:block md:max-w-[440px] md:max-h-[440px]",
               "lg:hidden"
             )}
+            placeholder="blur"
+            blurDataURL="https://placehold.co/440x440"
           />
           <Image
             src={projectImage}
@@ -61,6 +66,8 @@ export function ProjectCard({
               "hidden object-cover object-center aspect-square w-full",
               "lg:block lg:max-w-[416px] lg:max-h-[416px]"
             )}
+            placeholder="blur"
+            blurDataURL="https://placehold.co/416x416"
           />
           <div className="absolute inset-0 group-hover:bg-black/50 transition-colors flex items-center justify-center">
             <span
@@ -68,7 +75,7 @@ export function ProjectCard({
                 "text-transparent group-hover:text-white transition-colors underline underline-offset-4 font-semibold"
               )}
             >
-              SEE PROJECT DETAILS
+              See project details
             </span>
           </div>
         </MotionLink>

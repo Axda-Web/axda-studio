@@ -63,6 +63,9 @@ const config: Config = {
       transitionProperty: {
         width: "width",
       },
+      // backgroundImage: {
+      //   pattern: "url('/svg/pattern/bubbles.svg')",
+      // },
     },
   },
   // eslint-disable-next-line @typescript-eslint/no-require-imports

@@ -21,7 +21,7 @@ export default function HomePage() {
       <AnimatedElement
         as="h1"
         className={cn(
-          "font-black text-4xl text-center",
+          "font-extrabold text-4xl text-center",
           "md:text-7xl",
           "lg:text-9xl"
         )}
@@ -32,7 +32,8 @@ export default function HomePage() {
           ease: "easeOut",
         }}
       >
-        Fast, Robust, & Elegant <UIIllustration />.
+        {/* Fast, Robust, & Elegant <UIIllustration />. */}
+        FAST, ROBUST, & ELEGANT <UIIllustration />.
       </AnimatedElement>
       <AnimatedElement
         as="p"
