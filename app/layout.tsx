@@ -23,6 +23,8 @@ export const metadata: Metadata = {
     "Creative developer specializing in fast, robust, and beautiful user interfaces. Delivering seamless web and mobile experiences with innovative design and cutting-edge development techniques.",
 };
 
+// TODO: Uniformise font-sizes on differents viewports
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -31,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${interSans.className} ${knewaveCurs.variable} antialiased`}
+        className={`${interSans.className} ${knewaveCurs.variable} antialiased bg-pattern`}
       >
         <ThemeProvider
           attribute="class"
